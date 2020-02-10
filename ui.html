@@ -1,0 +1,66 @@
+<style>
+.container {
+  display: flex;
+  width: 800px;
+}
+
+*{
+  font-family: "Inter", sans-serif;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: -.005em;
+  color: rgba(0,0,0,.8);
+}
+
+p {
+  fong-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.005em;
+  color: rgba(0,0,0,.8);
+}
+
+img {
+  max-width: 100%;
+}
+
+</style>
+
+<div class="container">
+  <section class="left">
+    <!-- <img src="https://placehold.it/500x500"> -->
+    <h2>Almost there.</h2>
+    <p>You are about to request feedback on your design</p>
+    <p>In order to do so, please specify who your evaluators are, and what they should focus on.</p>
+
+  </section>
+
+  <section class="right">
+    <h2>Evaluation Setup</h2>
+    <p>Framework: <input id="count" value="5"></p>
+    <p>Label: <input id="count" value="input"></p>
+    <p>Label: <input id="count" value="input"></p>
+    <p>Label: <input id="count" value="input"></p>
+  </section>
+</div>
+
+<button id="create">Create</button>
+<button id="cancel">Cancel</button>
+
+
+<script>
+
+document.getElementById('create').onclick = () => {
+  const textbox = document.getElementById('count');
+  const count = parseInt(textbox.value, 10);
+  parent.postMessage({ pluginMessage: { type: 'create-rectangles', count } }, '*')
+}
+
+document.getElementById('cancel').onclick = () => {
+  parent.postMessage({ pluginMessage: { type: 'cancel' } }, '*')
+}
+
+</script>
