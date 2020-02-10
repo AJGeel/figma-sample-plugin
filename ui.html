@@ -1,11 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <link rel="stylesheet" href="/css/style.css">
+
 <style>
-.container {
+.main {
   display: flex;
-  width: 800px;
+  border-bottom: 1px solid #E5E5E5;
 }
 
 *{
   font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 h2 {
@@ -13,6 +21,7 @@ h2 {
   font-weight: bold;
   letter-spacing: -.005em;
   color: rgba(0,0,0,.8);
+  margin-bottom: 1em;
 }
 
 p {
@@ -20,35 +29,128 @@ p {
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.005em;
-  color: rgba(0,0,0,.8);
+  color: rgba(0,0,0,.7);
+  margin-bottom: 10px;
 }
 
 img {
   max-width: 100%;
+  margin-bottom: 2em;
+}
+
+.left {
+  border-right: 1px solid #E5E5E5;
+  padding: 32px;
+
+  width: 33%;
+}
+
+.right {
+  padding: 32px;
+  flex: 1;
+  max-height: 324px;
+  overflow-y: scroll;
+}
+
+.bottom {
+  padding: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  font-size: 12px;
+  padding: 8px 20px;
+  border-radius: 6px;
+  border: 1px solid black;
+  margin-left: 1em;
+
+  transition: all .3s ease-in-out;
+}
+
+button.btn-main {
+  background-color: #18A0FB;
+  border: 1px solid #17A0FB;
+  color: #fff;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+form input, form select {
+  font-size: 12px;
+  background-color: #E8F5FF;
+  border-radius: 4px;
+  padding: 4px 10px;
+  margin-bottom: 1em;
+  border: 1px solid #8CC3EE;
+}
+
+form label {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+form label span {
+  font-style: italic;
 }
 
 </style>
 
-<div class="container">
+</head>
+
+<body>
+
+<div class="main">
   <section class="left">
-    <!-- <img src="https://placehold.it/500x500"> -->
+    <img src="https://i.imgur.com/jlf4nPT.png">
     <h2>Almost there.</h2>
-    <p>You are about to request feedback on your design</p>
+    <p>You are about to request feedback on your design.</p>
     <p>In order to do so, please specify who your evaluators are, and what they should focus on.</p>
 
   </section>
 
   <section class="right">
     <h2>Evaluation Setup</h2>
-    <p>Framework: <input id="count" value="5"></p>
-    <p>Label: <input id="count" value="input"></p>
-    <p>Label: <input id="count" value="input"></p>
-    <p>Label: <input id="count" value="input"></p>
+
+    <form>
+
+      <label for="evaluation_framework">Evaluation Framework</label>
+      <select id="evaluation_framework">
+        <option value="nielsen">Nielsen's Usability Heuristics</option>
+        <option value="tam">Technology Acceptance Model (TAM)</option>
+        <option value="sus">System Usability Scale (SUS)</option>
+      </select>
+
+      <label for="count">Label</label>
+      <input id="count" value="5">
+
+      <label for="foo">Label</label>
+      <input id="foo" value="null">
+
+      <label for="bar">Label <span>- Optional</span></label>
+      <input id="bar" value="null">
+
+    </form>
+
+    <p>Artis viverra sollicitudin lectus. Etiam maximus felis nisl, sit amet vulputate nisl lacinia a. Mauris mattis in purus in rhoncus.</p>
+    <p>Nam et lectus vel sem vestibulum faucibus lacinia vitae felis. Morbi accumsan augue eu consequat dapibus. Nunc vulputate eget artem et sollicitudin.</p>
+    <p>Artis viverra sollicitudin lectus. Etiam maximus felis nisl, sit amet vulputate nisl lacinia a. Mauris mattis in purus in rhoncus.</p>
+    <p>Nam et lectus vel sem vestibulum faucibus lacinia vitae felis. Morbi accumsan augue eu consequat dapibus. Nunc vulputate eget artem et sollicitudin.</p>
   </section>
 </div>
 
-<button id="create">Create</button>
-<button id="cancel">Cancel</button>
+<section class="bottom">
+  <button id="cancel">Cancel</button>
+  <button id="create" class="btn-main">Submit Request</button>
+</section>
 
 
 <script>
@@ -64,3 +166,5 @@ document.getElementById('cancel').onclick = () => {
 }
 
 </script>
+</body>
+</html>

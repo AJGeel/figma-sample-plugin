@@ -1,0 +1,96 @@
+.main {
+  display: flex;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+*{
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: -.005em;
+  color: rgba(0,0,0,.8);
+  margin-bottom: 1em;
+}
+
+p {
+  fong-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.005em;
+  color: rgba(0,0,0,.7);
+  margin-bottom: 10px;
+}
+
+img {
+  max-width: 100%;
+  margin-bottom: 2em;
+}
+
+.left {
+  border-right: 1px solid #E5E5E5;
+  padding: 32px;
+
+  width: 33%;
+}
+
+.right {
+  padding: 32px;
+  flex: 1;
+  max-height: 324px;
+  overflow-y: scroll;
+}
+
+.bottom {
+  padding: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  font-size: 12px;
+  padding: 8px 20px;
+  border-radius: 6px;
+  border: 1px solid black;
+  margin-left: 1em;
+
+  transition: all .3s ease-in-out;
+}
+
+button.btn-main {
+  background-color: #18A0FB;
+  border: 1px solid #17A0FB;
+  color: #fff;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+form input, form select {
+  font-size: 12px;
+  background-color: #E8F5FF;
+  border-radius: 4px;
+  padding: 4px 10px;
+  margin-bottom: 1em;
+  border: 1px solid #8CC3EE;
+}
+
+form label {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+form label span {
+  font-style: italic;
+}
