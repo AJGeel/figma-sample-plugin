@@ -14,6 +14,7 @@ Currently, the plugin contains placeholders that will support the following UX E
 * (TAM) `Technology Acceptance Model`.
 * (SUS) `System Usability Scale`.
 * (UEQ) `User Experience Questionnaire`.
+* (UEQ-S) `Short User Experience Questionnaire`.
 * Mark Hassenzahl's `AttrakDiff`.
 * `Perspective-Based Inspection`.
 * `Hedonic Utility Scale`.
