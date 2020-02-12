@@ -35,7 +35,7 @@ p {
 
 img {
   max-width: 100%;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 .left {
@@ -110,7 +110,8 @@ form label span {
 
 <div class="main">
   <section class="left">
-    <img src="https://i.imgur.com/jlf4nPT.png">
+    <!-- <img src="https://i.imgur.com/jlf4nPT.png"> -->
+    <img src="https://i.imgur.com/JdIGvK6.png">
     <h2>Almost there.</h2>
     <p>You are about to request feedback on your design.</p>
     <p>In order to do so, please specify who your evaluators are, and what they should focus on.</p>
@@ -127,16 +128,36 @@ form label span {
         <option value="nielsen">Nielsen's Usability Heuristics</option>
         <option value="tam">Technology Acceptance Model (TAM)</option>
         <option value="sus">System Usability Scale (SUS)</option>
+        <option value="ueq">User Experience Questionnaire (UEQ)</option>
+        <option value="ad">AttrakDiff</option>
+        <option value="pbi">Perspective-Based Inspection</option>
+        <option value="hedut">Hedonic Utility Scale (HED/UT)</option>
+        <option value="pas">Product Attachment Scale</option>
       </select>
 
-      <label for="count">Label</label>
-      <input id="count" value="5">
+      <label for="count">Amount of Participants</label>
+      <input id="count" type="number" min="1" value="5">
 
-      <label for="foo">Label</label>
-      <input id="foo" value="null">
+      <label for="beta">Label <span>- Optional</span></label>
+      <input id="beta" value="null">
 
-      <label for="bar">Label <span>- Optional</span></label>
-      <input id="bar" value="null">
+      <label for="gamma">Colour Picker</label>
+      <input  id="gamma"type="color">
+
+      <label for="delta">File Uploader</label>
+      <input id="delta" type="file">
+
+      <div class="radio" style="margin: 1em 0figma ;">
+        <p><b>Radio Options</b></p>
+        <input id="alpha1" type="radio" value="Option One" name="radio">
+        <label for="alpha1">Option One</label></br>
+
+        <input id="alpha2" type="radio" value="Option Two" name="radio">
+        <label for="alpha2">Option Two</label></br>
+
+        <input id="alpha3" type="radio" value="Option Three" name="radio">
+        <label for="alpha3">Option Three</label></br>
+      </div>
 
     </form>
 
