@@ -18,3 +18,7 @@ Currently, the plugin contains placeholders that will support the following UX E
 * `Perspective-Based Inspection`.
 * `Hedonic Utility Scale`.
 * `Product Attachment Scale`.
+* `Visual Aesthetics of Websites Inventory`.
+* (SUPR-Q)`Standardized User Experience Percentile Rank Questionnaire`.
+* (NPS)`Net Promoter Score`.
+* (SMEQ) `Subjective Mental Effort Questionnaire`.
